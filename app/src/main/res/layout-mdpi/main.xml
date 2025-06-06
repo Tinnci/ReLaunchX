@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/normal_bg"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <LinearLayout
+    	android:id="@+id/linearLayoutTop"
+        style="@style/LinearLayoutToolbar" >
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_home" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/lru_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_lre" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/favor_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_fav" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_search" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/settings_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_gear2" >
+        </ImageButton>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/normal_bg_gray"
+        android:gravity="center|left"
+        android:padding="2dp"
+        tools:text="/sdcard"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/normal_fg"
+        android:textStyle="bold">
+    </Button>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNavigate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/LinearLayoutToolbar" >
+
+        <LinearLayout
+            android:background="@drawable/main_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.757">
+        <Button
+            android:id="@+id/goup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.757"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/ci_levelup"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/normal_fg"
+            android:singleLine="true"
+            android:text="@string/main_launcher_nb_layout_go_one_level_up"
+            >
+        </Button>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="8dp">
+                <TextView
+                    android:id="@+id/filter_results_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/normal_transparent"
+                    android:paddingTop="5dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/filter_off"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/normal_fg">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/show_hidden_icon"
+                    android:layout_below="@id/filter_results_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/normal_transparent"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/show_hidden_off"
+                    android:visibility="visible"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/normal_fg"
+                    android:textStyle="bold" >
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/upscroll_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:drawableLeft="@drawable/ci_arrowup"
+            android:paddingLeft="8dp"
+            android:textColor="@color/normal_fg"
+            android:text="0%" >
+        </Button>
+
+        <Button
+            android:id="@+id/downscroll_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:drawableLeft="@drawable/ci_arrowdown"
+            android:paddingLeft="8dp"
+            android:textColor="@color/normal_fg"
+            android:text="0%" >
+        </Button>
+
+        <ImageButton
+            android:id="@+id/advanced_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_tools" >
+        </ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1" >
+        <!--android:layout_height="fill_parent"-->
+
+        <GridView
+            android:id="@+id/gl_list"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:duplicateParentState="true"
+            android:numColumns="3"
+            android:smoothScrollbar="false"
+            android:stretchMode="columnWidth" >
+        </GridView>
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="fill_parent"-->
+    </LinearLayout>
+
+
+    <LinearLayout
+    	android:id="@+id/linearLayoutBottom"
+    	android:layout_marginTop="8dp"
+        style="@style/LinearLayoutToolbar" >
+
+    <RelativeLayout
+            android:id="@+id/mem_layout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/mem_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/normal_transparent"
+                android:gravity="center"
+                android:text="@string/main_launcher_nb_layout_memory"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/normal_fg" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/mem_level"
+                android:layout_below="@id/mem_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/normal_transparent"
+                android:gravity="center"
+                android:text="@string/main_launcher_nb_layout_mem"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/normal_fg"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/app_last"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_lrea" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/all_applications_btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_grid" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/app_favorites"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="0.65"
+            android:background="@drawable/main_button"
+            android:src="@drawable/ci_fava" >
+        </ImageButton>
+
+        <RelativeLayout
+            android:id="@+id/bat_layout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/bat_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/normal_transparent"
+                android:drawableRight="@drawable/wifi_on"
+                android:gravity="center"
+                android:text="@string/main_launcher_nb_layout_battery"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/normal_fg" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/bat_level"
+                android:layout_below="@id/bat_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/normal_transparent"
+                android:gravity="center"
+                android:text="@string/main_launcher_nb_layout_b"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/normal_fg"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
