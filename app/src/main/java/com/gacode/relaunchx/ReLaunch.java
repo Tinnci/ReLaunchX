@@ -2671,39 +2671,42 @@ public class ReLaunch extends Activity {
 			batteryLevelFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
 
 			// What's new processing
-			final int latestVersion = prefs.getInt("latestVersion", 0);
-			int tCurrentVersion = 0;
-			try {
-				tCurrentVersion = getPackageManager().getPackageInfo(
-						getPackageName(), 0).versionCode;
-			} catch (Exception e) {
-			}
-			final int currentVersion = tCurrentVersion;
-			if (currentVersion > latestVersion) {
-				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				WebView wv = new WebView(this);
-				wv.loadDataWithBaseURL(null,
-						getResources().getString(R.string.about_help)
-								+ getResources().getString(R.string.about_appr)
-								+ getResources().getString(R.string.whats_new),
-						"text/html", "utf-8", null);
-				// "What's new"
-				builder.setTitle(getResources().getString(
-						R.string.jv_relaunchx_whats_new));
-				builder.setView(wv);
-				builder.setPositiveButton(
-						getResources().getString(R.string.jv_relaunchx_ok),
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog,
-									int whichButton) {
-								SharedPreferences.Editor editor = prefs.edit();
-								editor.putInt("latestVersion", currentVersion);
-								editor.commit();
-								dialog.dismiss();
-							}
-						});
-				builder.show();
-			}
+			// final int latestVersion = prefs.getInt("latestVersion", 0);
+			// int tCurrentVersion = 0;
+			// try {
+			//     tCurrentVersion = getPackageManager().getPackageInfo(
+			//             getPackageName(), 0).versionCode;
+			// } catch (Exception e) {
+			// }
+			// final int currentVersion = tCurrentVersion;
+			// if (currentVersion > latestVersion) {
+			//     AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			//     WebView wv = new WebView(this);
+			//     wv.loadDataWithBaseURL(
+			//             null,
+			//             getResources().getString(R.string.about_help)
+			//                     + getResources().getString(
+			//                             R.string.about_appr)
+			//                     + getResources().getString(
+			//                             R.string.whats_new),
+			//             "text/html", "utf-8", null);
+			//     // "What's new"
+			//     builder.setTitle(getResources().getString(
+			//             R.string.jv_relaunchx_whats_new));
+			//     builder.setView(wv);
+			//     builder.setPositiveButton(
+			//             getResources().getString(R.string.jv_relaunchx_ok),
+			//             new DialogInterface.OnClickListener() {
+			//                 public void onClick(DialogInterface dialog,
+			//                         int whichButton) {
+			//                     SharedPreferences.Editor editor = prefs.edit();
+			//                     editor.putInt("latestVersion", currentVersion);
+			//                     editor.commit();
+			//                     dialog.dismiss();
+			//                 }
+			//             });
+			//     builder.show();
+			// }
 
 			// incorrect device warning
 			// checkDevice(Build.DEVICE, Build.MANUFACTURER, Build.MODEL,
