@@ -15,7 +15,7 @@ public class Home extends Activity {
 
 		app = ((ReLaunchApp) getApplicationContext());
 		app.RestartIntent = PendingIntent.getActivity(this, 0, getIntent(),
-				getIntent().getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK);
+				getIntent().getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK | PendingIntent.FLAG_IMMUTABLE);
 
 		Intent intent = new Intent(Home.this, ReLaunch.class);
 		intent.putExtra("home", true);

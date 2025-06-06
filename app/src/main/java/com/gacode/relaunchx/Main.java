@@ -20,7 +20,7 @@ public class Main extends Activity {
 			System.setProperty("bn.bootanim.exit", "1");
 		};
 		app.RestartIntent = PendingIntent.getActivity(this, 0, getIntent(),
-				getIntent().getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK);
+				getIntent().getFlags() | Intent.FLAG_ACTIVITY_NEW_TASK | PendingIntent.FLAG_IMMUTABLE);
 
 		Intent intent = new Intent(Main.this, ReLaunch.class);
 		intent.putExtra("home", false);

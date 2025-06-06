@@ -2706,8 +2706,8 @@ public class ReLaunch extends Activity {
 			}
 
 			// incorrect device warning
-			checkDevice(Build.DEVICE, Build.MANUFACTURER, Build.MODEL,
-					Build.PRODUCT);
+			// checkDevice(Build.DEVICE, Build.MANUFACTURER, Build.MODEL,
+			//         Build.PRODUCT);
 
 			setEinkController();
 
