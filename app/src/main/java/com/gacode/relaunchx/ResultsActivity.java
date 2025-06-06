@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import ebook.EBook;
+import com.gacode.ebookparser.EBook;
 
 import android.app.Activity;
 import android.app.AlertDialog;

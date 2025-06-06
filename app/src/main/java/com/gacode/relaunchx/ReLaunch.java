@@ -16,9 +16,9 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
-import ebook.EBook;
-import ebook.parser.InstantParser;
-import ebook.parser.Parser;
+import com.gacode.ebookparser.EBook;
+import com.gacode.ebookparser.parser.InstantParser;
+import com.gacode.ebookparser.parser.Parser;
 
 import android.app.Activity;
 import android.app.ActivityManager;

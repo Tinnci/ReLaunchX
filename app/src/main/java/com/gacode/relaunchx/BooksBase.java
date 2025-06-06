@@ -3,10 +3,10 @@ package com.gacode.relaunchx;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.regex.Pattern;
-import ebook.EBook;
-import ebook.Person;
-import ebook.parser.InstantParser;
-import ebook.parser.Parser;
+import com.gacode.ebookparser.EBook;
+import com.gacode.ebookparser.Person;
+import com.gacode.ebookparser.parser.InstantParser;
+import com.gacode.ebookparser.parser.Parser;
 
 import android.content.ContentValues;
 import android.content.Context;
