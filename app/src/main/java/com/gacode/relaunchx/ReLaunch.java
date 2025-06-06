@@ -2744,7 +2744,7 @@ public class ReLaunch extends Activity {
 			IntentFilter filter = new IntentFilter(Intent.ACTION_MEDIA_MOUNTED);
 			filter.addDataScheme("file");
 			registerReceiver(this.SDCardChangeReceiver,
-					new IntentFilter(filter));
+					new IntentFilter(filter), Context.RECEIVER_NOT_EXPORTED);
 			mountReceiverRegistered = true;
 		}
 
@@ -2752,14 +2752,14 @@ public class ReLaunch extends Activity {
 			IntentFilter filter = new IntentFilter();
 			filter.addAction(Intent.ACTION_POWER_CONNECTED);
 			filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
-			registerReceiver(this.PowerChangeReceiver, new IntentFilter(filter));
+			registerReceiver(this.PowerChangeReceiver, new IntentFilter(filter), Context.RECEIVER_NOT_EXPORTED);
 			powerReceiverRegistered = true;
 		}
 
 		if (!wifiReceiverRegistered) {
 			IntentFilter filter = new IntentFilter();
 			filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-			registerReceiver(this.WiFiChangeReceiver, new IntentFilter(filter));
+			registerReceiver(this.WiFiChangeReceiver, new IntentFilter(filter), Context.RECEIVER_NOT_EXPORTED);
 			wifiReceiverRegistered = true;
 		}
 

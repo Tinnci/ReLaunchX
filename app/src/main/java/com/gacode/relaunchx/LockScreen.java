@@ -133,12 +133,13 @@ public class LockScreen extends Service implements View.OnClickListener {
 
         prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         IntentFilter bootCompleted = new IntentFilter(Intent.ACTION_BOOT_COMPLETED);
-        registerReceiver(screenReceiver, bootCompleted);
+        registerReceiver(screenReceiver, bootCompleted, Context.RECEIVER_NOT_EXPORTED);
 
         IntentFilter screenOffFilter = new IntentFilter(Intent.ACTION_SCREEN_OFF);
-        registerReceiver(screenReceiver, screenOffFilter);
+        registerReceiver(screenReceiver, screenOffFilter, Context.RECEIVER_NOT_EXPORTED);
+
         IntentFilter appLockFilter = new IntentFilter(ACTION_LOCK_SCREEN);
-        registerReceiver(screenReceiver, appLockFilter);
+        registerReceiver(screenReceiver, appLockFilter, Context.RECEIVER_NOT_EXPORTED);
 
         windowManager = ((WindowManager) getSystemService(WINDOW_SERVICE));
         int lockViewFlags = WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD;
