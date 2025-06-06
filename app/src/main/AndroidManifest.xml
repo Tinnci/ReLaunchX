@@ -41,7 +41,8 @@
         <!-- 迁移旧项目中的所有 Activity 声明 -->
         <activity android:name=".Home"
                   android:launchMode="singleInstance"
-                  android:stateNotNeeded="true">
+                  android:stateNotNeeded="true"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME"/>
@@ -51,7 +52,8 @@
 
         <activity android:name=".Home1"
                   android:launchMode="singleInstance"
-                  android:stateNotNeeded="true">
+                  android:stateNotNeeded="true"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="com.bn.intent.action.home" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -61,7 +63,8 @@
 
         <activity android:name=".Shop"
                   android:launchMode="singleInstance"
-                  android:stateNotNeeded="true">
+                  android:stateNotNeeded="true"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="com.bn.intent.action.shop" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -71,7 +74,8 @@
 
         <activity android:name=".Library"
                   android:launchMode="singleInstance"
-                  android:stateNotNeeded="true">
+                  android:stateNotNeeded="true"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="com.bn.intent.action.library"></action>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -82,7 +86,8 @@
         <activity android:name=".Main"
                   android:launchMode="singleInstance"
                   android:stateNotNeeded="true"
-                  android:label="@string/app_name">
+                  android:label="@string/app_name"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -90,59 +95,70 @@
        </activity>
 
         <!-- 迁移旧项目中的 LockScreen Service -->
-        <service android:name=".LockScreen"/>
+        <service android:name=".LockScreen" android:exported="true"/>
 
-        <activity android:name="ReLaunch">
+        <activity android:name="ReLaunch"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-       <activity android:name="Advanced">
+       <activity android:name="Advanced"
+                 android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-       <activity android:name="AllApplications">
+       <activity android:name="AllApplications"
+                 android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="TypesActivity">
+        <activity android:name="TypesActivity"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="PrefsActivity" android:theme="@android:style/Theme.Light">
+        <activity android:name="PrefsActivity" android:theme="@android:style/Theme.Light"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="SearchActivity">
+        <activity android:name="SearchActivity"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="ResultsActivity">
+        <activity android:name="ResultsActivity"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="FiltersActivity">
+        <activity android:name="FiltersActivity"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="TaskManager">
+        <activity android:name="TaskManager"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="Viewer">
+        <activity android:name="Viewer"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name="Editor">
+        <activity android:name="Editor"
+                  android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
