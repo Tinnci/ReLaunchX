@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ReLaunchX-Modern"
 include(":app")
- 
+include(":libs:ebookparser") // <--- 添加这一行
