@@ -2793,27 +2793,27 @@ public class ReLaunch extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.search:
+		int itemId = item.getItemId();
+		if (itemId == R.id.search) {
 			menuSearch();
 			return true;
-		case R.id.mime_types:
+		} else if (itemId == R.id.mime_types) {
 			menuTypes();
 			return true;
-		case R.id.about:
+		} else if (itemId == R.id.about) {
 			menuAbout();
 			return true;
-		case R.id.setting:
+		} else if (itemId == R.id.setting) {
 			menuSettings();
 			return true;
-		case R.id.lastopened:
+		} else if (itemId == R.id.lastopened) {
 			menuLastopened();
 			return true;
-		case R.id.favorites:
+		} else if (itemId == R.id.favorites) {
 			menuFavorites();
 			return true;
-		default:
-			return true;
+		} else {
+			return super.onOptionsItemSelected(item);
 		}
 	}
 

@@ -424,16 +424,16 @@ public class SearchActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.about:
+		int itemId = item.getItemId();
+		if (itemId == R.id.about) {
 			app.About(this);
 			return true;
-		case R.id.setting:
+		} else if (itemId == R.id.setting) {
 			Intent intent = new Intent(SearchActivity.this, PrefsActivity.class);
 			startActivity(intent);
 			return true;
-		default:
-			return true;
+		} else {
+			return super.onOptionsItemSelected(item);
 		}
 	}
 }

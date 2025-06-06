@@ -1036,22 +1036,22 @@ public class ResultsActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.mime_types:
+		int itemId = item.getItemId();
+		if (itemId == R.id.mime_types) {
 			Intent intent1 = new Intent(ResultsActivity.this,
 					TypesActivity.class);
 			startActivityForResult(intent1, ReLaunch.TYPES_ACT);
 			return true;
-		case R.id.about:
+		} else if (itemId == R.id.about) {
 			app.About(this);
 			return true;
-		case R.id.setting:
+		} else if (itemId == R.id.setting) {
 			Intent intent3 = new Intent(ResultsActivity.this,
 					PrefsActivity.class);
 			startActivity(intent3);
 			return true;
-		default:
-			return true;
+		} else {
+			return super.onOptionsItemSelected(item);
 		}
 	}
 

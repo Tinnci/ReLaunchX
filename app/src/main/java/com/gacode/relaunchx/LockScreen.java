@@ -109,24 +109,19 @@ public class LockScreen extends Service implements View.OnClickListener {
                 retryCount = 3;
             }
         }
-        switch (view.getId()) {
-            default:
-                addDigit((String)view.getTag());
-                break;
-
-            case R.id.deletePasswordButton:
-                delDigit();
-                break;
-
-            case R.id.unlockPasswordButton:
-                if(!lockPassword.equals(password)) {
-                    passwordView.setText(getText(R.string.lock_screen_incorrect_passwd));
-                    incorrectPassword = true;
-                } else {
-                    windowManager.removeView(lockView);
-                    lockView = null;
-                }
-                break;
+        int id = view.getId();
+        if (id == R.id.deletePasswordButton) {
+            delDigit();
+        } else if (id == R.id.unlockPasswordButton) {
+            if (!lockPassword.equals(password)) {
+                passwordView.setText(getText(R.string.lock_screen_incorrect_passwd));
+                incorrectPassword = true;
+            } else {
+                windowManager.removeView(lockView);
+                lockView = null;
+            }
+        } else {
+            addDigit((String) view.getTag());
         }
     }
 
