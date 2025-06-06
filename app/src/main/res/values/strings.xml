@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">ReLaunchX</string>
+	<string name="app_name_modern">ReLaunchX Modern</string>
 	<string name="model_warning">&lt;h2&gt;The tool is made for:&lt;br&gt;
 		Nook Simple Touch&lt;br&gt;
 		Sony PRS-T1&lt;br&gt;
